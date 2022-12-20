@@ -28,7 +28,5 @@ public class LoginPage {
         return driver.switchTo().alert().getText();
 
     }
-    public void Wait(){
-        WebDriverWait wait=new WebDriverWait(driver,5);
-    }
+
 }

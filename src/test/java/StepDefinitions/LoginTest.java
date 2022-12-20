@@ -1,21 +1,19 @@
 package StepDefinitions;
 
-import BaseTest.BaseTest;
 import Pages.HomePage;
 import Pages.LoginPage;
-import io.cucumber.java.After;
-import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+
+import static BaseTest.BaseTest.driver;
 import static org.junit.Assert.assertEquals;
 
-public class LoginTest extends BaseTest{
+public class LoginTest {
+
    LoginPage loginPage;
    HomePage homePage;
+
     @Given("User Is In The Login Page")
     public void user_is_in_the_login_page() {
           loginPage=new LoginPage(driver);
@@ -24,7 +22,7 @@ public class LoginTest extends BaseTest{
     public void user_enters_and(String username, String Password) {
       loginPage.setUserName(username);
       loginPage.setPassword(Password);
-      var homepage=loginPage.clickLoginButton();
+      homePage=loginPage.clickLoginButton();
 
     }
     @Then("User Should Login Successfully")
