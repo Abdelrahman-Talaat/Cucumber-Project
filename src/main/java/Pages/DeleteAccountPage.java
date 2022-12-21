@@ -25,7 +25,7 @@ public class DeleteAccountPage {
     }
     public void acceptAlert(){
         driver.switchTo().alert().accept();
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+
     }
     public String getAlertAcceptionMessage(){
 
