@@ -7,6 +7,6 @@ import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "Features/fundTransfer.feature",glue = {"StepDefinitions", "BaseTest"})
+@CucumberOptions(features = "Features/addCustomer.feature",glue = {"StepDefinitions", "BaseTest"})
 public class TestRunner extends BaseTest {
 }
